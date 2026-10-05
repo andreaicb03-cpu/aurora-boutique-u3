@@ -1,0 +1,56 @@
+/* Paleta de colores y estilos para Aurora Boutique */
+:root {
+  --color-primario: #2c3e50;
+  --color-acento: #e67e22;
+  --fondo-suave: #f8f9fa;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--fondo-suave);
+  color: #333333;
+}
+
+/* Ajuste de altura uniforme para el carrusel */
+.carousel-item img {
+  height: 420px;
+  object-fit: cover;
+}
+
+/* Flexbox en tarjetas de productos para alinear botones y contenido */
+.card-producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-producto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card-producto img {
+  height: 260px;
+  object-fit: cover;
+}
+
+/* Encabezados decorativos de sección */
+.titulo-seccion {
+  position: relative;
+  padding-bottom: 10px;
+  font-weight: 700;
+  color: var(--color-primario);
+}
+
+.titulo-seccion::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-acento);
+}
